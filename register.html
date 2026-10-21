@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="egistration form for the Department of Computer Science and Business Systems.">
+  <title>Register | Department of CSBS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Department of Computer Science and Business Systems</h1>
+    <p>SRM TRP College, Tirchy</p>
+    <nav aria-label="Primary">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="register.html" aria-current="page">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section id="registration">
+      <h2>Open-House Visit Registration</h2>
+      <p>Fill this form to register for the CSBS department open house. Fields marked <strong>required</strong> must be filled.</p>
+      <form action="https://department.csbs.edu/register" method="post">
+        <fieldset>
+          <legend>Personal details</legend>
+          <label for="full-name">Full name</label>
+          <input type="text" id="full-name" name="full_name">
+          <label for="email">Email address (required)</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+          <label for="phone">Mobile number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" autocomplete="tel">
+          <label for="visit-date">Preferred visit date</label>
+          <input type="date" id="visit-date" name="visit_date" min="2026-11-01" max="2026-11-30" required>
+        </fieldset>
+        <fieldset class="choice">
+          <legend>Mode of visit</legend>
+          <input type="radio" id="mode-campus" name="visit_mode" value="campus" checked>
+          <label for="mode-campus">On campus</label>
+          <input type="radio" id="mode-online" name="visit_mode" value="online">
+          <label for="mode-online">Online session</label>
+        </fieldset>
+        <fieldset class="choice">
+          <legend>Areas of interest</legend>
+          <input type="checkbox" id="int-analytics" name="interests" value="business-analytics">
+          <label for="int-analytics">Business analytics</label>
+          <input type="checkbox" id="int-software" name="interests" value="software-development">
+          <label for="int-software">Software development</label>
+          <input type="checkbox" id="int-entrepreneurship" name="interests" value="entrepreneurship">
+          <label for="int-entrepreneurship">Entrepreneurship</label>
+        </fieldset>
+        <fieldset>
+          <legend>Visting time</legend>
+          <label for="session">Visting time</label>
+          <select id="session" name="session" required>
+            <option value="morning">Morning, 10:00 to 12:00</option>
+            <option value="afternoon">Afternoon, 14:00 to 16:00</option>
+          </select>
+        </fieldset>
+        <button type="submit">Submit registration</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
